@@ -1,0 +1,14 @@
+# Last modified time: 2026-09-14-15:04
+# Last modified content: Translate all metadata comments into English
+# File design: Version-control ignore configuration
+# File purpose: Exclude virtual environments, caches, coverage data, and build artifacts
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/

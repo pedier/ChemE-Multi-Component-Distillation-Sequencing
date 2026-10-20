@@ -1,0 +1,30 @@
+# File design: Unified build, dependency, test, and style configuration
+# File purpose: Define package metadata and coverage
+# Author: Yanzhe Fang
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distillation-reinforce"
+version = "0.1.0"
+description = "Masked REINFORCE for four-component distillation sequencing."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["torch>=2.3,<3", "distillation-sequencing-env==0.1.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-cov>=5.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = [
+  "--cov=distillation_reinforce",
+  "--cov-report=term-missing",
+  "--cov-fail-under=90",
+]

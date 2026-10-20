@@ -1,0 +1,16 @@
+# File design: Version-control ignore configuration
+# File purpose: Exclude virtual environments, caches, coverage data, and build artifacts
+# Author: Yanzhe Fang
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+AGENTS.md
+.agents/
+mini-linter.zip
